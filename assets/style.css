@@ -130,6 +130,7 @@ ul {
     grid-template-columns: repeat(1, 1fr);
 }
 .tarjeta {
+    position: relative;
     width: 100%;
     height: 30vh;
     overflow: hidden;
@@ -140,6 +141,27 @@ ul {
     object-fit: cover;
     filter: grayscale(100%);
     transition: filter 0.3s ease;
+}
+.tarjeta button {
+    position: absolute;
+    bottom: 2rem;
+    right: 8rem;
+    background-color: var(--color-secundario);
+    color: var(--color-claro);
+    padding: 2rem 3rem;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-size: 2rem;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+    opacity: 0;
+}
+.tarjeta:hover button {
+    opacity: 1;
+    transition: .7s ease;
+    bottom: 2rem;
+    right: 2rem;
 }
 .tarjeta:hover img {
     filter: grayscale(0%);
